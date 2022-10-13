@@ -8,6 +8,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import '../core/core.dart';
 import '../indicators/indicators.dart';
 import '../util.dart';
+import 'dart:ui' as ui;
 
 part 'fortune_wheel.dart';
 

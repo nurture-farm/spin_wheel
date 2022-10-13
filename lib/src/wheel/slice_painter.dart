@@ -31,14 +31,6 @@ class _CircleSlicePainter extends CustomPainter {
     // draw slice border
     if (strokeWidth > 0) {
       canvas.drawPath(
-        path,
-        Paint()
-          ..color = strokeColor!
-          ..strokeWidth = strokeWidth
-          ..style = PaintingStyle.stroke,
-      );
-
-      canvas.drawPath(
         Path()
           ..arcTo(
               Rect.fromCircle(
@@ -51,6 +43,14 @@ class _CircleSlicePainter extends CustomPainter {
         Paint()
           ..color = strokeColor!
           ..strokeWidth = strokeWidth * 2
+          ..shader = ui.Gradient.linear(
+            Offset.zero,
+            // const Offset(-10.0, -10.0),
+            const Offset(10.0, 10.0),
+            const <Color>[Color(0xFFFF0000), Color(0xA8FF0000), Color(0xFFFF0000), Color(0xA8FF0000)],
+            const <double>[0.25, 0.25, 0.75, 0.75],
+            TileMode.mirror,
+          )
           ..style = PaintingStyle.stroke,
       );
     }
