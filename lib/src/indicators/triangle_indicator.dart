@@ -17,7 +17,7 @@ class TriangleIndicator extends StatelessWidget {
         width: 36,
         height: 36,
         child: _Triangle(
-          color: color ?? theme.accentColor,
+          color: color ?? Theme.of(context).colorScheme.secondary,
           elevation: 2,
         ),
       ),
