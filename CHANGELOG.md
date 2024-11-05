@@ -1,4 +1,4 @@
-## [1.3.1] - 2024-10-20
+## [1.3.2] - 2024-10-20
 
 - add support for indicator animation (huge thanks to [@yakup2525](https://github.com/yakup2525))
 

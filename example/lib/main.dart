@@ -86,8 +86,6 @@ class DemoApp extends StatefulWidget {
 }
 
 class _DemoAppState extends State<DemoApp> {
-  final _appRouter = AppRouter();
-
   @override
   Widget build(BuildContext context) {
     return ThemeModeScope(
