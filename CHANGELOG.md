@@ -1,3 +1,25 @@
+## [1.3.1] - 2024-10-20
+
+- add support for indicator animation (huge thanks to [@yakup2525](https://github.com/yakup2525))
+
+## [1.3.1] - 2024-02-05
+
+- add support for triangle indicator customization (huge thanks to [@Alghost](https://github.com/Alghost))
+- fix NaN and infinite value handling in FortuneWheel (huge thanks to [@azaderdogan](https://github.com/azaderdogan))
+
+## [1.3.0] - 2023-07-04
+
+- add support for haptic feedback when an item border passes (huge thanks to [@YatsenkoDev](https://github.com/YatsenkoDev))
+  - use the new `FortuneWheel.hapticImpact` attribute
+- add support for getting notified, when an items border passes
+  - use the new `FortuneWheel.onFocusItemChanged` attribute
+- update all references to `ThemeData` to use the corresponding values from `ColorScheme`
+
+## [1.2.1] - 2023-05-22
+
+- update to support Dart 3
+  - change references from `ThemeData.accentColor` to `ThemeData.colorScheme.accentColor`
+
 ## [1.2.0] - 2022-02-01
 
 - new parameter `alignment` on the `FortuneWheel`

@@ -1,7 +1,7 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../router.gr.dart';
+import '../pages/pages.dart';
 
 class AppLayout extends StatelessWidget {
   final Widget child;
@@ -14,20 +14,23 @@ class AppLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: Text('Fortune Wheel Demo'),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex:
-            context.router.current.name == FortuneWheelRoute.name ? 0 : 1,
+            GoRouterState.of(context).name == FortuneWheelPage.kRouteName
+                ? 0
+                : 1,
         onTap: (index) {
           switch (index) {
             case 0:
-              context.router.replace(FortuneWheelRoute());
+              FortuneWheelPage.go(context);
               break;
 
             case 1:
-              context.router.replace(FortuneBarRoute());
+              FortuneBarPage.go(context);
               break;
           }
         },
